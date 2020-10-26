@@ -33,4 +33,4 @@ MySQL system was used in database operations. Tables were created for door and n
 ![](https://funkyimg.com/i/38d73.png)
 
 ## Preview of Application
-![alt text](https://im6.ezgif.com/tmp/ezgif-6-2a13dc3d8831.gif)
+![alt text](https://github.com/isilsukorkmaz/Openlayers-Web-Application/blob/master/preview.gif)
