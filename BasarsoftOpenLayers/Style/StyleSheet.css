@@ -1,0 +1,47 @@
+﻿@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+body {
+    font-family: "Open Sans";
+    font-size: 16px;
+    background:white;
+}
+
+#pencere {
+    background-color: darkcyan;
+    color:black;
+}
+
+form {
+    padding: 20px;
+    background-color: cadetblue;
+    color: #404243;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+    form label,
+    form input
+     {
+        border: 0;
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    form input {
+        height: 40px;
+        line-height: 50px;
+        background: #fff;
+        color: #000;
+        padding: 0 6px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    form .error {
+        color: #ff0000;
+    }
+
+   

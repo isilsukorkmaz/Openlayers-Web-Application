@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="styport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Map Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Style/StyleSheet.css" rel="stylesheet" />
+       <style>
+           body {
+               font-family: "Open Sans";
+               font-size: 16px;
+               background: white;
+           }
+       </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-dark primary-color" style="background-color: darkcyan">
+       
+        <span class="navbar-text" style="color:white">
+            <img src="https://cdn3.iconfinder.com/data/icons/faticons/32/globe-01-512.png" width="60" height="60"  class="d-inline-block align-top" alt=""> Harita Uygulaması
+        </span>
+
+        <div id="items" style="margin-top:20px" class=" collapse navbar-collapse">
+
+            <a class="w3-button w3-round-large w3-white" data-toggle="modal" id="getInfo" style="margin-top:5px" onclick="getInfo()"> &nbsp; Bilgi Al &nbsp;</a>
+            <a class="w3-button w3-round-large w3-white" data-toggle="modal" id="addressbtn" style="margin-top:5px"> &nbsp; Adres Sorgula &nbsp;</a>
+
+          
+
+            <ul class="nav navbar-nav navbar-right" style="margin-right:120px">
+                <li style="margin-top:18px">
+                    <label id="ekle" style="color:white">Ekle &nbsp;</label>
+                    <select id="type">
+                        <option value="Select">Seç</option>
+                        <option value="Point" onselect="zoomAlert() ">Kapı</option>
+                        <option value="Polygon" onselect="zoomAlert()">Mahalle</option>
+                    </select>
+                </li>
+                <li style="margin-top:15px">
+                    <label id="mapType" style="color:white">&nbsp; Harita Katmanı &nbsp;</label>
+                    <select id="layer-select">
+                        <option value="AerialWithLabelsOnDemand" selected>Aerial with labels</option>
+                        <option value="SimpleMap">Simple Map</option>
+                        <option value="RoadOnDemand">Road</option>
+                    </select>
+                </li>
+
+
+            </ul>
+
+        </div>
+         
+         
+        
+        
+    </nav>
+  
+    <div style="width:90%" class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Işılsu Korkmaz</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
